@@ -31,11 +31,19 @@ h1 {
 button {
     background-color: #2e2c2c;
     font-size: 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+
     
 }
-.thebutton {
+.the-button {
     display: flex;
-    align-self: center;
+    justify-content: center;
+    margin-left: 14rem;
+
 }
 .container {
   display: flex;
@@ -55,12 +63,61 @@ img {
 
 .box {
     display: flex;
-    border: 1rem dotted red;
+    /* border: 1rem dotted red; */
     padding: 1rem;
     justify-content: center;
-    background-color: #586ea7;
+    background-color: #696a6e;
     
     
+}
+#quiz {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1rem dotted black; */
+  font-size: 2rem;
+  align-self: center;
+  
+  
+}
+#Question {
+  align-self: center;
+  font-weight: bold;
+}
+#answer1 {
+  align-self: center;
+}
+#answer2 {
+  align-self: center;
+
+}
+#answer3 {
+  align-self: center;
+
+}
+#answer4{
+  align-self: center;
+
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1rem dotted rgb(22, 129, 148); */
+  font-size: 2rem;
+}
+#score {
+  align-self: center;
+  font-weight: bold;
+}
+#timer {
+  align-self: center;
+  font-weight: bold;
+}
+#the-results {
+  align-self: center;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -70,3 +127,4 @@ img {
     margin
   }
 }
+
