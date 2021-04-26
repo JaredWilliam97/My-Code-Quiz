@@ -39,12 +39,12 @@ button {
 
     
 }
-.the-button {
+/* #start-btn {
     display: flex;
     justify-content: center;
     margin-left: 14rem;
 
-}
+} */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +70,7 @@ img {
     
     
 }
-#quiz {
+.quiz-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -80,7 +80,7 @@ img {
   
   
 }
-#Question {
+#Question-container {
   align-self: center;
   font-weight: bold;
 }
