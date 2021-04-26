@@ -71,54 +71,31 @@ img {
     
 }
 .quiz-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /* border: 1rem dotted black; */
-  font-size: 2rem;
-  align-self: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 10px 0;
+}
+.btn {
+  background-color: #242526;
   
   
 }
-#Question-container {
-  align-self: center;
-  font-weight: bold;
+.btn:hover {
+  border-color: #e4e6eb;
 }
-#answer1 {
-  align-self: center;
-}
-#answer2 {
-  align-self: center;
-
-}
-#answer3 {
-  align-self: center;
-
-}
-#answer4{
-  align-self: center;
-
+#question {
+  font-size: 2.5rem;
+  
 }
 
-.results {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* border: 1rem dotted rgb(22, 129, 148); */
-  font-size: 2rem;
-}
-#score {
-  align-self: center;
-  font-weight: bold;
-}
-#timer {
-  align-self: center;
-  font-weight: bold;
-}
-#the-results {
-  align-self: center;
-  font-weight: bold;
-}
+
 
 @media screen and (min-width: 768px) {
   .column-card {
