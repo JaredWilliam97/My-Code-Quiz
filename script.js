@@ -39,7 +39,7 @@ var questions = [
     ],
   },
 ];
-
+// Created Start button
 var startButton = document.getElementById("start-btn");
 
 var nextButton = document.getElementById("next-btn");
@@ -47,26 +47,28 @@ var questionContainerElement = document.getElementById("question-container");
 var shuffledQuestions, currentQuestionIndex;
 var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("answer-questions");
-
+// add startbutton
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", function () {
+  //add index ++ to question to question
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     setNextQuestion();
   }
 });
+// add function to start game
 function startGame() {
   console.log("started");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   setNextQuestion();
 }
-
+// added function
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
-
+// created question to show function
 function showQuestion(question) {
   console.log(question);
   questionElement.textContent = question.question;
@@ -74,7 +76,7 @@ function showQuestion(question) {
     var button = document.createElement("button");
     button.textContent = answer.text;
     button.classList.add("btn");
-
+    //created a loop
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
@@ -82,6 +84,7 @@ function showQuestion(question) {
     button.addEventListener("click", selectAnswer);
   });
 }
+// created function to reset the answer sheet
 function resetState() {
   answerButtonsElement.textContent = "";
   // nextButton.classList.add;
@@ -89,7 +92,7 @@ function resetState() {
   //   answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   // }
 }
-
+// created function to select answer
 function selectAnswer(e) {
   var selectedButton = e.target;
   var correct = selectedButton.dataset.correct;
@@ -98,7 +101,7 @@ function selectAnswer(e) {
     setStatusClass(button, button.dataset.correct);
   });
 }
-
+// fucntion for correct or wong
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
