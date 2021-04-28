@@ -1,17 +1,15 @@
 # My-Code-Quiz
 
-## Acceptance Criteria
+This project is to create a Code Quiz using Html, CSS, and Javascript trying to utilize all the skills that I have learned in this class.
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
+In this project I am creating a code quiz. I created the html first, to get the basic layout. I then used CSS to style the page the way I wanted it. Then finally I used Javscript to make the Code Quiz functional.
+
+There were some features to my website that I think will stand out. I created some pictures that go along with the quiz.
+
+As I built my website I used comments to help others reading to be able to understand it better.
+
+This was a fun project but very challenging, because this is the first time using Javascript. I have learned alot so far and excited to learn more!
+
+License: None
+
+Jared Sutch

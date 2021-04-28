@@ -1,3 +1,4 @@
+// my questions set to an array
 var questions = [
   {
     question: "How many majors has Jack Nicklous Won?",
@@ -123,6 +124,7 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
+//// created a timer and made it increment 10 seconds if a quesiton is not anwered correctly
 function setTime() {
   var timerInterval = setInterval(function () {
     timer--; // timer = timer - 1 // timer -= 1
