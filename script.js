@@ -50,21 +50,23 @@ var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("answer-questions");
 var timerElement = document.getElementById("timer");
 var timer = 75;
-
+var timerid = document.querySelector("#timer");
+var score = 0;
 // add startbutton
 startButton.addEventListener("click", startGame);
-nextButton.addEventListener("click", function () {
-  //add index ++ to question to question
-  currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
-    setNextQuestion();
-  }
-});
+// nextButton.addEventListener("click", function () {
+//   //add index ++ to question to question
+//   currentQuestionIndex++;
+//   if (currentQuestionIndex < questions.length) {
+//     setNextQuestion();
+//   }
+// });
 // add function to start game
 function startGame() {
   console.log("started");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
+  setTime();
   setNextQuestion();
 }
 // added function
@@ -102,6 +104,11 @@ function selectAnswer(e) {
   var selectedButton = e.target;
   var correct = selectedButton.dataset.correct;
   console.log("The value of correct is: " + correct);
+  if (correct) {
+    score++;
+  } else {
+    timer -= 10;
+  }
   // setStatusClass(document.body, correct);
   // Array.from(answersButtonsElement.children).forEach((button) => {
   //   setStatusClass(button, button.dataset.correct);
@@ -128,6 +135,9 @@ function clearStatusClass(element) {
 function setTime() {
   var timerInterval = setInterval(function () {
     timer--; // timer = timer - 1 // timer -= 1
-    if (timer === 0) clearInterval(timerInterval);
+    timerid.textContent = "Time Remaining: " + timer;
+    if (timer <= 0) {
+      clearInterval(timerInterval);
+    }
   }, 1000);
 }
