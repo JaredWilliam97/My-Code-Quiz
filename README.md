@@ -1,4 +1,9 @@
 # My-Code-Quiz
+![image](https://user-images.githubusercontent.com/80869140/116331530-9cf1f380-a795-11eb-9fff-ef1bfaacedbb.png)
+
+
+
+https://jaredwilliam97.github.io/My-Code-Quiz/
 
 This project is to create a Code Quiz using Html, CSS, and Javascript trying to utilize all the skills that I have learned in this class.
 
