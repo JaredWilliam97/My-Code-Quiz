@@ -47,6 +47,9 @@ var questionContainerElement = document.getElementById("question-container");
 var shuffledQuestions, currentQuestionIndex;
 var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("answer-questions");
+var timerElement = document.getElementById("timer");
+var timer = 75;
+
 // add startbutton
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", function () {
@@ -79,6 +82,7 @@ function showQuestion(question) {
     //created a loop
     if (answer.correct) {
       button.dataset.correct = answer.correct;
+      // console.log("This answer is correct");
     }
     answerButtonsElement.appendChild(button);
     button.addEventListener("click", selectAnswer);
@@ -92,14 +96,19 @@ function resetState() {
   //   answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   // }
 }
-// created function to select answer
+// created function to select answer. This runs every time a user clicks on an answer
 function selectAnswer(e) {
   var selectedButton = e.target;
   var correct = selectedButton.dataset.correct;
-  setStatusClass(document.body, correct);
-  Array.from(answersButtonsElement.children).forEach((button) => {
-    setStatusClass(button, button.dataset.correct);
-  });
+  console.log("The value of correct is: " + correct);
+  // setStatusClass(document.body, correct);
+  // Array.from(answersButtonsElement.children).forEach((button) => {
+  //   setStatusClass(button, button.dataset.correct);
+  // });
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    setNextQuestion();
+  }
 }
 // fucntion for correct or wong
 function setStatusClass(element, correct) {
@@ -115,5 +124,8 @@ function clearStatusClass(element) {
   element.classList.remove("wrong");
 }
 function setTime() {
-  var timerInterval = setInterval(function () {});
+  var timerInterval = setInterval(function () {
+    timer--; // timer = timer - 1 // timer -= 1
+    if (timer === 0) clearInterval(timerInterval);
+  }, 1000);
 }
