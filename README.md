@@ -3,6 +3,8 @@
 
 
 
+https://jaredwilliam97.github.io/My-Code-Quiz/
+
 This project is to create a Code Quiz using Html, CSS, and Javascript trying to utilize all the skills that I have learned in this class.
 
 In this project I am creating a code quiz. I created the html first, to get the basic layout. I then used CSS to style the page the way I wanted it. Then finally I used Javscript to make the Code Quiz functional.
