@@ -14,6 +14,11 @@ As I built my website I used comments to help others reading to be able to under
 
 This was a fun project but very challenging, because this is the first time using Javascript. I have learned alot so far and excited to learn more!
 
+Credits:
+
+My study group has always been helpful and has given me alot of information. 
+Joshua Lee, Chip Long, Alex Jurgs, Lacey Pape, and Lauren Gabaldon!
+
 License: None
 
 Jared Sutch
